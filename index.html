@@ -4,59 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Кофейня</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 <body>
   <header>
-    <a href="#" class="logo">Кофейня</a>
-    <button class="menu-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-    <nav class="navigation">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <a href="index.html" class="logo">Кофейня</a>
+    <div class="dropdown" onmouseleave="this.classList.remove('clicked')">
+        <span>Информация</span>
+        <div class="dropdown-content">
+            <a href="сontacts.html">Контакты</a>
+            <a href="about_us.html">О нас</a>
+        </div>
+    </div>
   </header>
 
   <section class="slider">
     <div class="slider-container">
-      <img src="image1.jpg" alt="Coffee Image 1" class="slide">
-      <img src="image2.jpg" alt="Coffee Image 2" class="slide">
-      <img src="image3.jpg" alt="Coffee Image 3" class="slide">
-    </div>
-    <div class="pagination">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSRJ00ohuB5Fo5OIq0fuYlwvmndeRhNKSPbg&usqp=CAU" alt="Coffee Image 1" class="slide">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVSQVfIuC4U9FFxakxZBZGHZFz5FkzG18x7Q&usqp=CAU" alt="Coffee Image 2" class="slide">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAqAOIUbpRjpRcz8iLUo6OZEIt-XepakuY8Q&usqp=CAU" alt="Coffee Image 3" class="slide">
     </div>
   </section>
-
-  <main>
-    <section>
-      <h2>About Us</h2>
-      <p>Кто мы? Кофейня! Где мы? В кофейне! КОФЕЙНЯЯЯ</p>
-    </section>
-    <section>
-      <h2>Меню</h2>
-      <ul>
-        <li>Кофе (Эспрессо, Латте, Капучино)</li>
-        <li>Чай (Черный, Зеленый, Красный)</li>
-        <li>Еда (Бурерброды, Пельмени)</li>
-      </ul>
-    </section>
-  </main>
 
   <footer>
     <p>&copy; 2024 Кофейня</p>
   </footer>
-
-  <script src="script.js"></script>
+  <script>
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.addEventListener('click', function() {
+        this.classList.toggle('clicked');
+    });
+</script>
 </body>
 </html>
